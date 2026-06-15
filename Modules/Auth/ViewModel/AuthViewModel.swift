@@ -137,8 +137,9 @@ final class AuthViewModel: ObservableObject {
     }
     
     func logout() {
-         KeychainService.shared.removeToken()
-         isAuthenticated = false
+        KeychainService.shared.removeToken()
+     
+        isAuthenticated = false
      }
 }
 

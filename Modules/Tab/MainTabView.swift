@@ -50,32 +50,32 @@ struct MainTabView: View {
 }
 
 
-
-struct ExchangeView: View {
-    @EnvironmentObject var appCoordinator: AppCoordinator
-    
-    var body: some View {
-        VStack {
-            Text("Exchange")
-                .font(.title)
-            
-            Spacer()
-            
-            Button(action: {
-                appCoordinator.logout()
-            }) {
-                HStack {
-                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                    Text("Logout")
-                }
-                .foregroundColor(.red)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.red.opacity(0.1))
-                .cornerRadius(12)
-            }
-            .padding(.horizontal, 24)
-            .padding(.bottom, 40)
-        }
-    }
-}
+//
+//struct ExchangeView: View {
+//    @EnvironmentObject var appCoordinator: AppCoordinator
+//    
+//    var body: some View {
+//        VStack {
+//            Text("Exchange")
+//                .font(.title)
+//            
+//            Spacer()
+//            
+//            Button(action: {
+//                appCoordinator.logout()
+//            }) {
+//                HStack {
+//                    Image(systemName: "rectangle.portrait.and.arrow.right")
+//                    Text("Logout")
+//                }
+//                .foregroundColor(.red)
+//                .padding()
+//                .frame(maxWidth: .infinity)
+//                .background(Color.red.opacity(0.1))
+//                .cornerRadius(12)
+//            }
+//            .padding(.horizontal, 24)
+//            .padding(.bottom, 40)
+//        }
+//    }
+//}

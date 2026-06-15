@@ -20,7 +20,7 @@ final class AppCoordinator: ObservableObject {
     @Published var authViewModel = AuthViewModel()
     private var cancellables = Set<AnyCancellable>()
     @Published var cardsViewModel = CardsViewModel()
-    
+
     init() {
         authViewModel.$isAuthenticated
             .sink { [weak self] isAuthenticated in
@@ -43,8 +43,13 @@ final class AppCoordinator: ObservableObject {
         route = .main
     }
     
-    func logout() {
-        authViewModel.logout() 
+    func logout(tabCoordinator: TabCoordinator) {
+        authViewModel.logout()
+        tabCoordinator.cardsPath = NavigationPath()
+        tabCoordinator.selectedTab = .cards
+        tabCoordinator.isTabBarHidden = false
+        cardsViewModel.cards = []
+        cardsViewModel.accounts = []
         route = .auth
     }
 }

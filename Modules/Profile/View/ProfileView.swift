@@ -187,7 +187,7 @@ struct ProfileView: View {
     // MARK: - Logout
     private var logoutButton: some View {
         Button {
-            appCoordinator.logout()
+            appCoordinator.logout(tabCoordinator: tabCoordinator)
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: "rectangle.portrait.and.arrow.right")
